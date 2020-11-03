@@ -9,12 +9,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.aai.digisky.models.login.AllPeople
+import com.samples.coroutinestesting.pojo.AllPeople
 import com.samples.coroutinestesting.networking.LiveDataResult
 import com.samples.coroutinestesting.platform.MainViewModelFactory
-import com.samples.coroutinestesting.usecases.UseCases
 import kotlinx.coroutines.Dispatchers
-import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
 

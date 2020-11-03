@@ -1,4 +1,4 @@
-package com.aai.digisky.models.login
+package com.samples.coroutinestesting.pojo
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

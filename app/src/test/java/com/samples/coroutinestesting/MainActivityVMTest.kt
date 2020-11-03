@@ -1,11 +1,11 @@
 package com.samples.coroutinestesting
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.samples.coroutinestesting.pojo.AllPeople
 import com.samples.coroutinestesting.base.BaseUT
 import com.samples.coroutinestesting.di.configureTestAppComponent
 import com.samples.coroutinestesting.networking.LiveDataResult
 import com.samples.coroutinestesting.usecases.UseCases
-import com.samples.digisky.models.login.AllPeople
 import com.google.gson.Gson
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
@@ -48,7 +48,7 @@ class MainActivityVMTest: BaseUT() {
         mainActivityVM = MainActivityVM(dispatcher,dispatcher,useCase)
 
         val sampleResponse = getJson("success_resp_list.json")
-        var jsonObj = Gson().fromJson(sampleResponse,AllPeople::class.java)
+        var jsonObj = Gson().fromJson(sampleResponse, AllPeople::class.java)
         coEvery { useCase.fetchData(any()) } returns jsonObj
 
         mainActivityVM.mAllPeopleResponse.observeForever {}

@@ -1,8 +1,7 @@
 package com.samples.coroutinestesting.networking
 
-import com.aai.digisky.models.login.AllPeople
+import com.samples.coroutinestesting.pojo.AllPeople
 import retrofit2.http.GET
-import retrofit2.http.Headers
 import retrofit2.http.Query
 
 interface LoginAPIService {

@@ -1,7 +1,7 @@
 package com.samples.coroutinestesting.repo
 
 import com.samples.coroutinestesting.networking.LoginAPIService
-import com.aai.digisky.models.login.AllPeople
+import com.samples.coroutinestesting.pojo.AllPeople
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 
@@ -13,7 +13,7 @@ class MainActivityRepo : KoinComponent{
         return  processDataFetchLogic(parameter)
     }
 
-    suspend fun processDataFetchLogic(parameter:String): AllPeople{
+    suspend fun processDataFetchLogic(parameter:String): AllPeople {
 
         for (x in 0 until 10){
             println(" Data manipulation prior to REST API request if required $x")

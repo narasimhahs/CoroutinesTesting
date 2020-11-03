@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.samples.coroutinestesting.networking.LiveDataResult
 import com.samples.coroutinestesting.usecases.UseCases
-import com.aai.digisky.models.login.AllPeople
+import com.samples.coroutinestesting.pojo.AllPeople
 import kotlinx.coroutines.*
 import org.koin.core.KoinComponent
 

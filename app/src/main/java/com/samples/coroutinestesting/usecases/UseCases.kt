@@ -1,7 +1,7 @@
 package com.samples.coroutinestesting.usecases
 
 import com.samples.coroutinestesting.repo.MainActivityRepo
-import com.aai.digisky.models.login.AllPeople
+import com.samples.coroutinestesting.pojo.AllPeople
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 

@@ -1,10 +1,10 @@
 package com.samples.coroutinestesting.repo
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.samples.coroutinestesting.pojo.AllPeople
 import com.samples.coroutinestesting.base.BaseUT
 import com.samples.coroutinestesting.di.configureTestAppComponent
 import com.samples.coroutinestesting.networking.LoginAPIService
-import com.samples.digisky.models.login.AllPeople
 import io.mockk.MockKAnnotations
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockWebServer
