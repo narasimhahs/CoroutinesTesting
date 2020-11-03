@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.samples.coroutinestesting"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", "\"https://swapi.dev/api/\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.room:room-runtime:2.2.5'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Mockito
+    testImplementation "org.mockito:mockito-android:$mockito_version"
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_kotlin_version"
+    testImplementation  "com.squareup.retrofit2:retrofit-mock:2.3.0"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$couroutines_version"
+    testImplementation        "com.squareup.okhttp3:mockwebserver:$mockwebserver_version"
+    testImplementation "io.mockk:mockk:$mockk_version"
+    testImplementation "android.arch.core:core-testing:$arch_testing"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$couroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$couroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$couroutines_version"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$coroutines_adapter"
+
+    //Network
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$http_logging"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:$jackson_fasterxml"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$kotlin_runtime_serializ"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxcalladapter_version"
+
+    //Lifecycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_extension"
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_extension"
+
+    //Koin
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    implementation "org.koin:koin-androidx-ext:$koin_version"
+    testImplementation "org.koin:koin-test:$koin_version"
+
+    testImplementation "android.arch.core:core-testing:$android_arch_core_testing"
+}
